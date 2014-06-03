@@ -32,14 +32,14 @@ $('.ryu').mouseenter(function() {
 $(document).keydown(function(event){
     if (event.which == 88) {
         //playSwagga();
-        alert("You did it!");
+        console.log("You did it!");
         $('.ryu-ready').hide();
         $('.ryu-cool').show();     
 }
 })
 .keyup(function(event){
     if (event.which == 88) {
-        alert("You did it again!");
+        console.log("You did it again!");
        $('ryu-cool').hide();
         $('.ryu-ready').show();
     }
