@@ -12,6 +12,7 @@ margin-top: 110px;
 padding-left: 100px;
 min-width: 1200px;
 height: 500px;
+background-image: url('../images/parallax-3.jpg');
 }
 
 .instructions {
@@ -71,7 +72,6 @@ height: 494px;
 
 .ryu-still {
 	background-image: url('../images/ryu-standing-still.png');
-	display: inline-block;
 }
 
 .ryu-throwing {

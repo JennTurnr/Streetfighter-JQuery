@@ -2,12 +2,14 @@ $(document).ready(function() {
 $('.ryu').mouseenter(function() {
   $('.ryu-still').hide();
   $('.ryu-cool').hide();
+  $('.ryu-throwing').hide();
   $('.ryu-ready').show();
 })
 
 .mouseleave(function() {
   $('.ryu-ready').hide();
   $('.ryu-cool').hide();
+  $('.ryu-throwing').hide();
   $('.ryu-still').show();
 })
 
@@ -17,25 +19,23 @@ $('.ryu').mouseenter(function() {
     $('.ryu-cool').hide();
     $('.ryu-still').hide();
     $('.ryu-throwing').show();
-    $('.hadouken').finish().show()
-    .animate(
+    $('.hadouken').finish().show().animate(
       {'left': '300px'},
       500,
       function() {
         $(this).hide();
         $(this).css('left', '-180px');
-      }
-      );
+      });
+      
 })
 
 .mouseup(function() {
-    $('.ryu-still').hide();
     $('.ryu-throwing').hide();
+    $('.ryu-still').hide();
     $('.ryu-ready').hide();
     $('.ryu-cool').hide();
     $('.ryu-ready').show();
 });
-
 
 
 $(document).keydown(function(event){
@@ -48,7 +48,6 @@ $(document).keydown(function(event){
         $('.ryu-cool').show(); 
 }
 
-
 $(document).keyup(function(event){
   var cool_key = 88; // The keycode for x is 88
     if (event.which == cool_key) {
@@ -56,10 +55,8 @@ $(document).keyup(function(event){
       $('.ryu-ready').hide();
       $('.ryu-cool').hide();
       $('.ryu-still').show();
-    }
+ }
 });
-
-
 
 function playHadouken () {
   $('#hadouken-sound')[0].volume = 0.5;
